@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="bootstrap.min.css"></link>
+    <title>PALINDROME VISUALIZATION</title>
+</head>
+<body>
+    <script src="palindrome-check.js"></script>
+    <script type="text/javascript">
+
+        const show = () => {
+            
+            const text = document.getElementById("input").value
+            let kalimat
+            if(palindromeCheck(text)) {
+                kalimat = "Yes, your number/text is a palindrome!"
+            }
+            else {
+                kalimat = "No, your number/text isn't a palindrome."
+            }
+
+            console.log(kalimat)
+            document.getElementById("hasil").innerHTML = kalimat
+        }
+    </script>
+    <h2>What Palindrome Is?</h2>
+    <h4>Palindrome is a number/text that even if you reverse every character order on it, it's still same.</h4>
+    <h4>Or to be simple, can read forward or backward.</h4>
+    <h1>1 2 3 2 1</h1>
+    <h4>Even you backward it, it's still the same number!</h4>
+
+    <h2>Wanna check your number/text??</h2>
+    <input type="text" id="input">
+    <button onclick="show()">CHECK</button>
+    <h3 id="hasil"></h3>
+</body>
+</html>
